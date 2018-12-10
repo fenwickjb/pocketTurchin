@@ -1,19 +1,46 @@
 package com.bignerdranch.android.pocketturchin;
 
+import android.media.Image;
+
 import java.util.UUID;
 
 public class Art
 {
     private UUID artID;
+    private Image artImage;
     private String title;
     private String location;
     private String dates;
     private String description;
+    private boolean favorite;
+    private String artist;
 
     public Art()
     {
         artID = UUID.randomUUID();
     }
+
+    public Image getArtImage()
+    {
+        return artImage;
+    }
+
+    public void setArtImage(Image artImage)
+    {
+        this.artImage = artImage;
+    }
+
+    public String getArtist()
+    {
+        return artist;
+    }
+
+    public void setArtist(String artist)
+    {
+        this.artist = artist;
+    }
+
+
 
     public UUID getArtID()
     {
@@ -63,5 +90,14 @@ public class Art
     public void setDescription(String description)
     {
         this.description = description;
+    }
+
+    public boolean isFavorite()
+    {
+        return favorite;
+    }
+    public void setFavorite(boolean favorite)
+    {
+        this.favorite = favorite;
     }
 }

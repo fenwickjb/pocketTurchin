@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PocketTurchin</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="artist">Artist</string>
+    <string name="galleryLocation">Displayed in Gallery: </string>
+    <string name="exhibitionDates">Exhibition Dates: </string>
+    <string name="imageTitle">Image Title</string>
+    <string name="favorite">Favorite</string>
+
 </resources>
