@@ -4,11 +4,9 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import java.io.*;
 
 public class ArtLab
 {
@@ -63,6 +61,42 @@ public class ArtLab
         art.setDescription("Steel and Sagger fired porcelain, 2015-16");
         art.setLocation("Mayer Gallery");
         mArt.add(art);
+
+        art = new Art();
+        art.setArtist("Leonardo Davinci");
+        art.setTitle("Mona Lisa");
+        art.setDates("9/17/1800 - 12/07/18");
+        art.setDescription("One of the most famous paintings in the world.  1800-1801");
+        art.setLocation("Louvre Museum");
+        mArt.add(art);
+
+        art = new Art();
+        art.setArtist("Michaelangelo");
+        art.setTitle("The Creation of Adam");
+        art.setDates("9/17/1717 - 12/07/18");
+        art.setDescription("The Creation of Adam is the central element in Michelangelo’s large " +
+                "scale Sistine Chapel fresco..   21717");
+        art.setLocation("Sistine Chapel Fresco");
+        mArt.add(art);
+
+        art = new Art();
+        art.setArtist("Pablo Picaso");
+        art.setTitle("Guernica");
+        art.setDates("9/17/1937 - 12/07/18");
+        art.setDescription("Guernica, a political protest piece in Picasso’s distinct cubist " +
+                "style, was a central attraction at the Paris World Fair in 1937., 1937-1937");
+        art.setLocation("Guernica, Spain");
+        mArt.add(art);
+
+        art = new Art();
+        art.setArtist("Johannes Vermeer");
+        art.setTitle("Girl with a Pearl Earing");
+        art.setDates("9/17/1717 - 12/07/18");
+        art.setDescription(" No name is given and all the audience sees is a girl, who is " +
+                "a pearl earring, starring back.");
+        art.setLocation("Guernica, Spain");
+        mArt.add(art);
+
 
     }
 
