@@ -22,6 +22,7 @@ public class ArtActivity extends SingleFragmentActivity
     @Override
     protected Fragment createFragment()
     {
-        return new ArtFragment();
+        UUID artId = (UUID) getIntent().getSerializableExtra(EXTRA_ART_ID);
+        return ArtFragment.newInstance(artId);
     }
 }

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.UUID;
@@ -21,15 +20,23 @@ public class ArtFragment extends Fragment
     private TextView mArtistView;
     private TextView mLocationView;
     private TextView mDatesView;
-
+    private static final String ARG_ART_ID = "art_id";
 
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        UUID artId = (UUID) getActivity().getIntent()
-                .getSerializableExtra(ArtActivity.EXTRA_ART_ID);
+        UUID artId = (UUID) getArguments().getSerializable(ARG_ART_ID);
         mArt = ArtLab.get(getActivity()).getArt(artId);
+    }
+
+    public static ArtFragment newInstance(UUID artId)
+    {
+        Bundle args = new Bundle();
+        args.putSerializable(ARG_ART_ID, artId);
+        ArtFragment fragment = new ArtFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override
@@ -51,9 +58,6 @@ public class ArtFragment extends Fragment
 
         mDatesView = v.findViewById(R.id.art_dates);
         mDatesView.setText(mArt.getDates());
-
-
-
 
 
         mFavorited = (CheckBox) v.findViewById(R.id.checkbox1);

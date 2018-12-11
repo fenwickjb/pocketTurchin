@@ -78,7 +78,7 @@ public class ArtListFragment extends Fragment
              //Toast.makeText(getActivity(),mArt.getTitle() + " clicked", Toast.LENGTH_SHORT)
              //.show();
 //            Intent intent = ArtActivity.newIntent(getActivity(), mArt.getArtID());
-            Intent intent = ArtActivity.newIntent(getActivity(), mArt.getArtID());
+            Intent intent = ArtPagerActivity.newIntent(getActivity(), mArt.getArtID());
             startActivity(intent);
 
         }
