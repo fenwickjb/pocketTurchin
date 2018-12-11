@@ -20,10 +20,10 @@ public class ArtPagerActivity extends AppCompatActivity
     private ViewPager mViewPager;
     private List<Art> mArt;
 
-    public static Intent newIntent(Context packageContext, UUID crimeId)
+    public static Intent newIntent(Context packageContext, UUID artId)
     {
         Intent intent = new Intent(packageContext, ArtPagerActivity.class);
-        intent.putExtra(EXTRA_ART_ID, crimeId);
+        intent.putExtra(EXTRA_ART_ID, artId);
         return intent;
     }
 
@@ -34,7 +34,7 @@ public class ArtPagerActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_art_pager);
 
-        UUID crimeId = (UUID) getIntent().getSerializableExtra(EXTRA_ART_ID);
+        UUID artId = (UUID) getIntent().getSerializableExtra(EXTRA_ART_ID);
 
 
 
