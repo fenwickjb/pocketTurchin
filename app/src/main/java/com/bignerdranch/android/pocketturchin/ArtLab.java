@@ -1,6 +1,7 @@
 package com.bignerdranch.android.pocketturchin;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 
 import java.io.File;
@@ -33,7 +34,6 @@ public class ArtLab
         art.setDates("6/06/2018 - 1/12/2019");
         art.setDescription("Watercolor on cut paper, 10\"x10\", 2016");
         art.setLocation("Mezzanine Gallery");
-        //Image artImage = ImageIO.read
 
         //art.setArtImage(new Image("res/mipmap/dandelion/dandelion.jpg"));
 
@@ -48,6 +48,21 @@ public class ArtLab
         mArt.add(art);
 
 
+        art = new Art();
+        art.setArtist("Kelsey Merrick Wagner");
+        art.setTitle("The Elephantine in the Anthropocene\n");
+        art.setDates("7/07/2018 - 1/27/2019");
+        art.setDescription("Steel metal working 7\'x10\', 2018");
+        art.setLocation("Community Gallery");
+        mArt.add(art);
+
+        art = new Art();
+        art.setArtist("Rachel Stevens");
+        art.setTitle("The Broken Fragments of my Heart");
+        art.setDates("9/17/2018 - 12/07/18");
+        art.setDescription("Steel and Sagger fired porcelain, 2015-16");
+        art.setLocation("Mayer Gallery");
+        mArt.add(art);
 
     }
 

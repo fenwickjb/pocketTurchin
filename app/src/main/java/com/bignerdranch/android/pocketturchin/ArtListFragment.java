@@ -1,5 +1,6 @@
 package com.bignerdranch.android.pocketturchin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,8 +26,7 @@ public class ArtListFragment extends Fragment
                              Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_art_list, container, false);
-        mArtRecyclerView = (RecyclerView) view
-                .findViewById(R.id.art_recycler_view);
+        mArtRecyclerView = (RecyclerView) view.findViewById(R.id.art_recycler_view);
         mArtRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         updateUI();
@@ -75,8 +75,12 @@ public class ArtListFragment extends Fragment
         @Override
         public void onClick(View view)
         {
-            Toast.makeText(getActivity(),mArt.getTitle() + " clicked", Toast.LENGTH_SHORT)
-                    .show();
+             //Toast.makeText(getActivity(),mArt.getTitle() + " clicked", Toast.LENGTH_SHORT)
+             //.show();
+//            Intent intent = ArtActivity.newIntent(getActivity(), mArt.getArtID());
+            Intent intent = ArtActivity.newIntent(getActivity(), mArt.getArtID());
+            startActivity(intent);
+
         }
     }
 
